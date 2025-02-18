@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Books | TechBooks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="books.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TechBooks</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="books.html" class="active">All Books</a></li>
+            <li><a href="cart.html">Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div class="books-header">
+        <h2>Explore Our Collection</h2>
+        <div class="branch-filter">
+            <button class="filter-btn active" data-branch="all">All</button>
+            <button class="filter-btn" data-branch="CSE">CSE</button>
+            <button class="filter-btn" data-branch="ECE">ECE</button>
+            <button class="filter-btn" data-branch="EEE">EEE</button>
+            <button class="filter-btn" data-branch="CIVIL">Civil</button>
+        </div>
+    </div>
+
+    <div class="book-grid" id="bookGrid"></div>
+
+    
+<div id="pdfModal" class="pdf-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <iframe id="pdfViewer" frameborder="0"></iframe>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

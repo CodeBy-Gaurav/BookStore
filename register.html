@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | TechBooks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TechBooks</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+            <li><a href="books.html">All Books</a></li>
+            <li><a href="cart.html">Cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-container">
+        <h2>Create Account</h2>
+        <form id="registerForm" class="auth-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="fullName" placeholder=" " required>
+                    <label for="fullName">Full Name</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="registerEmail" placeholder=" " required>
+                    <label for="registerEmail">Email Address</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="password" id="registerPassword" placeholder=" " required>
+                    <label for="registerPassword">Password</label>
+                    <div class="password-strength">
+                        <div class="password-strength-bar"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" placeholder=" " required>
+                    <label for="confirmPassword">Confirm Password</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <select id="branch" required>
+                    <option value="">Select Your Branch</option>
+                    <option value="CSE">Computer Science</option>
+                    <option value="ECE">Electronics</option>
+                    <option value="EEE">Electrical</option>
+                    <option value="CIVIL">Civil</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Interests:</label>
+                <div class="interest-grid">
+                    <label class="interest-item">
+                        <input type="checkbox" name="interests" value="Programming">
+                        Programming
+                    </label>
+                    <label class="interest-item">
+                        <input type="checkbox" name="interests" value="Electronics">
+                        Electronics
+                    </label>
+                    <label class="interest-item">
+                        <input type="checkbox" name="interests" value="Electrical">
+                        Electrical
+                    </label>
+                    <label class="interest-item">
+                        <input type="checkbox" name="interests" value="Civil">
+                        Civil
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="auth-btn">Create Account</button>
+
+            <div class="auth-options">
+                <p>Already have an account? <a href="login.html">Login Here</a></p>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="pdfModal" class="pdf-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="pdfViewer" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
