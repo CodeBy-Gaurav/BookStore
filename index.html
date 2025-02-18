@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Bookstore</title>
+    <title>TechBooks - Engineering Bookstore</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="books.css"> <!-- Include books.css for card styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="logo">TechBooks</div>
         <ul class="nav-links">
@@ -19,30 +20,86 @@
         </ul>
     </nav>
 
+    <!-- Hero Section -->
     <div class="hero">
-        <h1>Welcome to TechBooks</h1>
-        <p>Your one-stop destination for engineering books</p>
-        <div class="branch-selector">
-            <select id="branchSelect">
-                <option value="">Select Your Branch</option>
-                <option value="CSE">Computer Science</option>
-                <option value="ECE">Electronics</option>
-                <option value="EEE">Electrical</option>
-                <option value="CIVIL">Civil</option>
-            </select>
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Your Next Tech Masterpiece</h1>
+            <p class="hero-subtitle">5,000+ Engineering Books | 98% Customer Satisfaction | 24/7 Support</p>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search books, authors, or topics...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <i class="fas fa-book-open"></i>
+                    <div>
+                        <span class="stat-number">8,500+</span>
+                        <span class="stat-label">Pages Available</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Happy Readers</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div>
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Engineering Branches</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- Branch Selection -->
+    <div class="branch-selector">
+        <select id="branchSelect">
+            <option value="">Select Your Branch</option>
+            <option value="CSE">Computer Science</option>
+            <option value="ECE">Electronics</option>
+            <option value="EEE">Electrical</option>
+            <option value="CIVIL">Civil</option>
+        </select>
+    </div>
+
+    <!-- Books Container -->
     <div class="book-container" id="bookContainer"></div>
 
-
-   
-<div id="pdfModal" class="pdf-modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <iframe id="pdfViewer" frameborder="0"></iframe>
+    <!-- Features Section -->
+    <div class="features-section">
+        <h2>Why Choose TechBooks?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Instant Access</h3>
+                <p>Get immediate digital access to all purchased books</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Quality Content</h3>
+                <p>Curated selection of top-rated academic resources</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset"></i>
+                <h3>Expert Support</h3>
+                <p>24/7 access to technical subject matter experts</p>
+            </div>
+        </div>
     </div>
-</div>
+
+    <!-- PDF Modal -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="pdfViewer" frameborder="0"></iframe>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
